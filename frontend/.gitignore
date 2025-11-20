@@ -1,0 +1,69 @@
+# ==================== DEPENDENCIES ====================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.pnpm-store/
+
+# ==================== BUILD OUTPUT ====================
+dist/
+dist-ssr/
+build/
+.cache/
+
+# ==================== LOCAL STORAGE ====================
+# Browser storage backups
+localStorage.json
+sessionStorage.json
+
+# ==================== LOGS ====================
+*.log
+logs/
+
+# ==================== ENVIRONMENT ====================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env*.local
+
+# ==================== IDE ====================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ==================== OS ====================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ==================== TEMP FILES ====================
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# ==================== TESTING ====================
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+
+
+# Debug files
+npm-debug.log*
+yarn-debug.log*
+
+# Editor directories
+.vscode-test/

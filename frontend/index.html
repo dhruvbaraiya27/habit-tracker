@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Authentication Section -->
+    <div id="auth-section" class="container">
+        <div class="auth-card">
+            <h1>🎯 Habit Tracker</h1>
+            <p class="subtitle">Build better habits, one day at a time</p>
+            
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="showLogin()">Login</button>
+                <button class="tab-btn" onclick="showRegister()">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" placeholder="Enter username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <div id="login-error" class="error-message"></div>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <label for="register-username">Username</label>
+                    <input type="text" id="register-username" placeholder="Choose username" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" placeholder="Choose password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+                <div id="register-error" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main App Section -->
+    <div id="app-section" class="container" style="display: none;">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <h1>🎯 My Habits</h1>
+                <div class="user-info">
+                    <span id="username-display"></span>
+                    <button onclick="logout()" class="btn btn-secondary">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Add Habit Form -->
+        <div class="add-habit-card">
+            <h2>Add New Habit</h2>
+            <form id="add-habit-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="habit-name" placeholder="Habit name (e.g., Morning Exercise)" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="habit-description" placeholder="Description (optional)">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Habit</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Habits List -->
+        <div id="habits-container" class="habits-grid">
+            <!-- Habits will be dynamically inserted here -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="empty-state" style="display: none;">
+            <div class="empty-icon">📝</div>
+            <h3>No habits yet!</h3>
+            <p>Create your first habit to get started on your journey.</p>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading-state" class="loading-state">
+            <div class="spinner"></div>
+            <p>Loading your habits...</p>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Habit</h2>
+                <button onclick="closeEditModal()" class="close-btn">&times;</button>
+            </div>
+            <form id="edit-habit-form">
+                <input type="hidden" id="edit-habit-id">
+                <div class="form-group">
+                    <label for="edit-habit-name">Habit Name</label>
+                    <input type="text" id="edit-habit-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-habit-description">Description</label>
+                    <input type="text" id="edit-habit-description">
+                </div>
+                <div class="form-group">
+                    <label for="edit-habit-streak">Current Streak</label>
+                    <input type="number" id="edit-habit-streak" min="0" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" onclick="closeEditModal()" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
