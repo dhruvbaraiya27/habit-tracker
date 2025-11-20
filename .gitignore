@@ -1,0 +1,28 @@
+# Database
+*.db
+*.db-shm
+*.db-wal
+backend/data/
+
+# Go
+*.exe
+*.out
+coverage.out
+backend/habit-tracker
+backend/vendor/
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
