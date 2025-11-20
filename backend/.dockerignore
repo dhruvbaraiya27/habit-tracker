@@ -1,0 +1,33 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+habit-tracker
+
+# Test files
+*.test
+*.out
+coverage.out
+
+# Database files (we'll create fresh in container)
+*.db
+
+# Dependencies
+vendor/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+README.md
