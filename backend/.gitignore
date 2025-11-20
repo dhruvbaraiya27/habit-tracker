@@ -1,0 +1,80 @@
+# ==================== GO SPECIFIC ====================
+# Compiled Object files
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Go build output
+/habit-tracker
+/main
+*.test
+*.prof
+
+# Go test coverage
+*.out
+coverage.out
+coverage.html
+coverage.txt
+
+# Go workspace
+go.work
+go.work.sum
+
+# Vendor directory
+/vendor/
+
+# Go module cache (usually in GOPATH, but just in case)
+go.sum.backup
+
+# ==================== DATABASE ====================
+# SQLite databases
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Database backups
+*.db.backup
+*.sql.backup
+
+# Data directory
+/data/
+data/*
+
+# ==================== LOGS ====================
+*.log
+logs/
+/logs/
+
+# ==================== TEMP FILES ====================
+*.tmp
+*.swp
+*.swo
+*~
+.*.swp
+
+# ==================== IDE ====================
+.vscode/
+.idea/
+*.iml
+
+# ==================== OS ====================
+.DS_Store
+Thumbs.db
+
+# ==================== TESTING ====================
+/test-results/
+/coverage/
+
+# ==================== ENVIRONMENT ====================
+.env
+.env.local
+.env.*.local
+
+# ==================== DEPLOYMENT ====================
+# Don't ignore Dockerfile
+# !Dockerfile
